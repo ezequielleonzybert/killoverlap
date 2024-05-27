@@ -5,7 +5,7 @@
 ## Usage
 
 ```sh
-py killoverlap.py input.svg output.scg --join
+py killoverlap.py /path/input.svg /path/output.svg --join
 ```
 
 ## Requirements
