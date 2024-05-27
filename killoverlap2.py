@@ -8,7 +8,6 @@ with BuildSketch() as sketch:
             add(edge)
         add(lines._obj)
 
-# shape = lines._obj
 shape = sketch.consolidate_edges()
 
 exporter = ExportSVG()
