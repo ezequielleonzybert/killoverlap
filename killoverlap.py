@@ -1,39 +1,27 @@
 from build123d import *
-import vpype as vp
+import argparse
 
-def is_point_on_segment(px, py, x1, y1, x2, y2):
-    collinear = (py - y1) * (x2 - x1) == (y2 - y1) * (px - x1)
-    within_bounds = min(x1, x2) < px < max(x1, x2) or min(y1, y2) < py < max(y1, y2)
-    return collinear and within_bounds
+def main(input_file, output_file):
+    input = import_svg(input_file)
 
-input = import_svg("input.svg")
+    with BuildSketch() as sketch:
+        with BuildLine() as lines:
+            for edge in input.edges():
+                add(edge)
+            add(lines._obj)
 
-exporter = ExportSVG()
-exporter.add_layer(name="layer1", line_color=(255,0,0))
+    shape = sketch.consolidate_edges()
 
-# Storing all segment and vertex information on arrays
-segments = []
-vertices = []
+    exporter = ExportSVG()
+    exporter.add_layer(name="layer1", line_color=(255,0,0),line_weight=1)
+    exporter.add_shape(shape,"layer1")
+    exporter.write(output_file)
 
-for wire in input:
-    for segment in wire.edges():
-        segments.append(segment.vertices())
-        for vertex in segment.vertices():
-            vertices.append(vertex)
-
-# Finding overlapping lines and counting them
-counter = 0
-
-for vertex in vertices:
-    px = vertex.X
-    py = vertex.Y
-    for segment in segments:
-        x1 = segment[0].X
-        y1 = segment[0].Y
-        x2 = segment[1].X
-        y2 = segment[1].Y
-        if is_point_on_segment(px, py, x1, y1, x2, y2):
-            counter+=1
+if __name__ == "__main__":
+    parser = argparse.ArgumentParser(description='Process SVG files.')
+    parser.add_argument('input_file', type=str, help='Path to the input SVG file.')
+    parser.add_argument('output_file', type=str, help='Path to the output SVG file.')
     
-if counter:
-    for segment in segments:
+    args = parser.parse_args()
+    
+    main(args.input_file, args.output_file)
