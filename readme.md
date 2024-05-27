@@ -1,4 +1,4 @@
-# KillOverlap
+# killOverlap
 
 Tiny python app to merge overlapping lines on SVG files using the [build123d](https://github.com/gumyr/build123d) library. Ideally for laser cutting projects.
 
