@@ -10,9 +10,7 @@ py killoverlap.py /path/input.svg /path/output.svg --join
 
 ## Requirements
 
-Python
-pip
-build123d
+Python, pip, build123d
 
 ```sh
 pip install -r requirements.txt
