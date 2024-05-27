@@ -1,5 +1,19 @@
-Merge overlapping lines in SVG files, ideally for laser cutting optimization.
+# KillOverlap
 
-RUN:
+## Merge overlapping lines on SVG files. Ideally for laser cutting projects
 
-``python process_svg.py input.svg output.svg``
+## Usage
+
+```sh
+py killoverlap.py input.svg output.scg --join
+```
+
+## Requirements
+
+Python
+pip
+build123d
+
+```sh
+pip install -r requirements.txt
+```
