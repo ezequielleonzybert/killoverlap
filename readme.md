@@ -10,7 +10,7 @@ py killoverlap.py /path/input.svg /path/output.svg --join[OPTIONAL]
 ## Requirements
 Python, build123d
 
-Download and install Python from https://www.python.org/
+Download and install Python from https://www.python.org/\
 Set Python with a PATH variable for your system to use it from any terminal.
 
 ```sh
