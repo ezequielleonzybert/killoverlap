@@ -4,7 +4,7 @@ Tiny python app to merge overlapping lines on SVG files using the [build123d](ht
 
 ## Usage
 ```sh
-py killoverlap.py /path/input.svg /path/output.svg --join[OPTIONAL]
+killoverlap /path/input.svg /path/output.svg -j[OPTIONAL]
 ```
 
 ## Requirements
@@ -13,6 +13,7 @@ Python, build123d
 Download and install Python from https://www.python.org/<br>
 Set Python with a PATH variable for your system to use it from any terminal.
 
+## Install
 ```sh
-pip install -r requirements.txt
+pip install dist/killoverlap-0.1.tar.gz
 ```
