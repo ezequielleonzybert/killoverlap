@@ -1,3 +1,39 @@
 Metadata-Version: 2.1
 Name: killoverlap
 Version: 0.1
+Summary: Merge all overlapping lines in an SVG drawing
+Home-page: https://github.com/ezequielleonzybert/killoverlap
+Author: Ezequiel León Zybert
+Author-email: ezequielleonzybert@gmail.com
+License: Apache License, Version 2.0
+Keywords: python,svg,overlap,overlapping,merge,lines,outlines,join,overlapped
+Classifier: Development Status :: 3 - Alpha
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.6
+Classifier: Programming Language :: Python :: 3.7
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: 3.9
+Description-Content-Type: text/markdown
+Requires-Dist: build123d
+
+# killOverlap
+Tiny python app to merge overlapping lines on SVG files using the [build123d](https://github.com/gumyr/build123d) library. Ideally for laser cutting projects.
+![Explanatory image](https://raw.githubusercontent.com/ezequielleonzybert/killoverlap/main/img/readme_img.jpg)
+
+## Usage
+```sh
+killoverlap /path/input.svg /path/output.svg -j[OPTIONAL]
+```
+
+## Requirements
+Python, build123d
+
+Download and install Python from https://www.python.org/<br>
+Set Python with a PATH variable for your system to use it from any terminal.
+
+## Install
+```sh
+pip install dist/killoverlap-0.1.tar.gz
+```
