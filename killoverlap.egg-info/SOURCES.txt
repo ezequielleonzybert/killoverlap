@@ -1,0 +1,8 @@
+README.md
+setup.py
+killoverlap/__init__.py
+killoverlap.egg-info/PKG-INFO
+killoverlap.egg-info/SOURCES.txt
+killoverlap.egg-info/dependency_links.txt
+killoverlap.egg-info/entry_points.txt
+killoverlap.egg-info/top_level.txt

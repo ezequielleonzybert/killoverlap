@@ -1,10 +1,10 @@
 from build123d import *
 import argparse
 
-def main(input_file, output_file, join):
+def main(input_file, output_file, j):
     input = import_svg(input_file)
 
-    if join:
+    if j:
         with BuildSketch() as sketch:
             with BuildLine() as lines:
                 for edge in input.edges():
@@ -22,12 +22,12 @@ def main(input_file, output_file, join):
     exporter.add_shape(shape,"layer1")
     exporter.write(output_file)
 
-if __name__ == "__main__":
-    parser = argparse.ArgumentParser(description='Process SVG files.')
+def runner():
+    parser = argparse.ArgumentParser(description='Find and merge all overlapping lines in an SVG drawing.')
     parser.add_argument('input_file', type=str, help='Path to the input SVG file.')
     parser.add_argument('output_file', type=str, help='Path to the output SVG file.')
-    parser.add_argument('--join', action='store_true', help='Enable the join feature.')
+    parser.add_argument('-j', action='store_true', help='Join all connected lines into a wire.')
     
     args = parser.parse_args()
     
-    main(args.input_file, args.output_file, args.join)
+    main(args.input_file, args.output_file, args.j)
