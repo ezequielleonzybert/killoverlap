@@ -1,6 +1,6 @@
 Metadata-Version: 2.1
 Name: killoverlap
-Version: 0.1.1
+Version: 0.1.4
 Summary: Merge all overlapping lines in an SVG drawing
 Home-page: https://github.com/ezequielleonzybert/killoverlap
 Author: Ezequiel León Zybert
@@ -35,5 +35,5 @@ Set Python with a PATH variable for your system to use it from any terminal.
 
 ## Install
 ```sh
-pip install -i https://test.pypi.org/simple/ killoverlap==0.1
+pip install -i https://test.pypi.org/simple/ killoverlap==0.1.4
 ```

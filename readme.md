@@ -15,5 +15,5 @@ Set Python with a PATH variable for your system to use it from any terminal.
 
 ## Install
 ```sh
-pip install -i https://test.pypi.org/simple/ killoverlap==0.1.1
+pip install -i https://test.pypi.org/simple/ killoverlap==0.1.4
 ```
