@@ -1,3 +1,4 @@
+README.md
 setup.py
 killoverlap/__init__.py
 killoverlap.egg-info/PKG-INFO
